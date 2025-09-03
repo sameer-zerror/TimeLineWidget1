@@ -96,12 +96,12 @@ const Article = () => {
                     <div className="col-md-12">
                       <div className="contentSec">
                         <h1 className="heading">
-                          The Mercedes-Benz E-Class: First Among Cars And A
-                          Benchmark In Luxury
+                          The Oberoi Rajvilas, Jaipur.
                         </h1>
                         <p className="subheading">
-                          For Esquire India’s Auto Issue, we look at what
-                          defines aspiration on Indian roads today{" "}
+                          "For Esquire India’s Travel & Leisure Issue, we
+                          journey through the world’s most opulent escapes —
+                          where luxury isn’t a label, but a way of life."
                         </p>
                         <div className="authorSec">
                           <span className="author">
@@ -123,35 +123,51 @@ const Article = () => {
                       <div className="content">
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            COCOONED IN THE COMFORT OF THE BACK SEAT of the{" "}
+                            Welcome to Jaipur The famed capital of Rajasthan,
+                            Jaipur has been affectionately known as the
                           </span>
                           <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://www.esquireindia.co.in/tag/mercedes"
                           >
-                            <span>Mercedes</span>
+                            <span> Pink </span>
                           </a>
                           <span>
-                            -Benz E-Class, wafting smoothly towards the airport,
-                            I find myself enveloped by the warm glow of the
-                            ambient lighting, immersed in the sheer indulgence
-                            that surrounds me. It’s in moments like these—quiet,
-                            uninterrupted—that one truly absorbs the brilliance
-                            of this machine.{" "}
+                            City ever since it was painted pink in 1876 to
+                            welcome Queen Victoria and the Prince of Wales, a
+                            gesture symbolising the warmth and hospitality of
+                            its people. Today, Jaipur continues to enchant with
+                            its grand forts, opulent palaces, bustling bazaars
+                            and rich architectural heritage. Set within 32 acres
+                            (129,499 square metres) of beautifully landscaped
+                            gardens, The Oberoi Rajvilas, Jaipur reflects
+                            traditional Rajasthani architecture, complete with
+                            reflection pools and tranquil courtyards. Exquisite
+                            accommodation, including luxury tents inspired by
+                            the era of the Maharajas, fine dining restaurants
+                            serving authentic Rajasthani and international
+                            cuisines, specially curated romantic experiences and
+                            our heartfelt hospitality come together to create
+                            the perfect setting for an unforgettable holiday. In
+                            line with our commitment to sustainability, the
+                            resort also features convenient Electric Vehicle
+                            (EV) charging facilities for guests.
                           </span>
                         </p>
                         <p style={{ textAlign: "left" }} />
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            As I glance around, soaking in the finely appointed
-                            cabin, I’m struck once again by just how
-                            awe-inspiring it is to sit in the back seat of an
-                            E-Class. It’s a sensation that never fades, no
-                            matter how many times I’ve experienced it. In India,
-                            owning a car bearing the iconic three-pointed star
-                            has long been seen as a symbol of success, prestige
-                            and aspiration.
+                            The Oberoi Rajvilas, Jaipur reflects traditional
+                            Rajasthani architecture, complete with reflection
+                            pools and tranquil courtyards. Exquisite
+                            accommodation, including luxury tents inspired by
+                            the era of the Maharajas, fine dining restaurants
+                            serving authentic Rajasthani and international
+                            cuisines, specially curated romantic experiences and
+                            our heartfelt hospitality come together to create
+                            the perfect setting for an unforgettable holiday. In
+                            line with our commitment to sustainability,
                           </span>
                         </p>
                         <div>
@@ -175,7 +191,7 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://cdn.esquireindia.co.in/editor-images/2025-07-18T07%3A06%3A33.290Z-Inline1.jpg"
+                                src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/Accommodation_Rajvilas/03-Luxury-Villa-With-Pool/desktop_overview_1260x700/luxury_villa_with_pool4.jpg"
                               />
                               <div className="photoBy">
                                 <span className="caption" />
@@ -186,46 +202,53 @@ const Article = () => {
                         </div>
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            Among all the models in the Mercedes-Benz lineup,
-                            the E-Class holds a special place in this narrative.
-                            It’s not just a car—it’s a milestone. Over the last
-                            30 years, more than 60,000 units of the E-Class have
-                            found homes across the country. While that number
-                            might not sound massive in broader automotive terms,
-                            it is quite extraordinary for a luxury model in a
-                            market that’s only recently embraced premium
-                            mobility at scale.{" "}
+                            Luxury Tent with Private Garden. Perfect for couples
+                            or single travellers. With spacious interiors, a
+                            large terrace and a private garden. Furnishings
+                            include a king size bed, teakwood floors and a
+                            sunlit en-suite bathroom with a standalone bathtub.
+                            Explore Book Kohinoor Villa with Private Pool. Spans
+                            three separate, spacious villa buildings. Two house
+                            the lavish, en-suite king size and twin bedrooms.
+                            Within the third, a grand lounge-dining space.
+                            Outside, a large pool and a private dining pavilion
+                            complete the experience. Explore Book Luxury Villas
+                            with Private Pool. Relax in the spacious king sized
+                            bedroom. Soak in the sunken marble bathtub beside
+                            private garden views. Take a dip in your large
+                            swimming pool. Experience the luxury of al fresco
+                            dining at your raised poolside pavilion.
                           </span>
                         </p>
                         <p style={{ textAlign: "left" }} />
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            The E-Class has consistently been Mercedes-Benz
-                            India’s best-seller and its success only surged
-                            further when the long wheelbase (LWB) variant was
-                            introduced in 2017—a configuration developed
-                            specifically for markets like India and China, where
-                            back-seat comfort reigns supreme. With this, the
-                            E-Class redefined luxury travel for the
-                            chauffeur-driven elite and widened its appeal to
-                            entrepreneurs and families alike. Now, in its latest
-                            avatar unveiled in October 2024, the E-Class raises
-                            the bar yet again.{" "}
+                            Share These beautiful villas provide ample
+                            opportunity for you to switch off and completely
+                            unwind, with its 355 square metre interiors. Relax
+                            in the spacious king sized bedroom. Soak in the
+                            sunken marble bathtub beside private garden views.
+                            Take a dip in your temperature controlled private
+                            pool or take advantage of in room dining at your
+                            poolside al fresco dining area. We are at your
+                            service 24 hours a day.
                           </span>
                         </p>
                         <p style={{ textAlign: "left" }} />
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            The newest generation is larger, smarter and more
-                            luxurious than ever. The highlight variant, the E
-                            450 4MATIC, combines power and panache. Its
-                            3.0-litre inline-six turbocharged petrol engine with
-                            mild-hybrid tech delivers a punchy 381 hp and 500 Nm
-                            of torque, ensuring that those who enjoy being
-                            behind the wheel aren’t left wanting.{" "}
+                            Spans three separate, spacious villa buildings. Two
+                            house the lavish, en-suite king size and twin
+                            bedrooms. Within the third, a grand lounge-dining
+                            space. Outside, a large pool and a private dining
+                            pavilion complete the experience. Explore Book
+                            Luxury Villas with Private Pool. Relax in the
+                            spacious king sized bedroom. Soak in the sunken
+                            marble bathtub beside private garden views. Take a
+                            dip in your large swimming pool.
                           </span>
                         </p>
-                               <TimeLineWidget1/>
+                        <TimeLineWidget1 />
 
                         <div className="StoriesInfo_left_innercntr-full-width">
                           <div
@@ -255,7 +278,7 @@ const Article = () => {
                                       decoding="async"
                                       data-nimg="fill"
                                       className="imgcover"
-                                      src="https://cdn.esquireindia.co.in/article/2025-07-11T08%3A53%3A24.450Z-Lead_09_TUNNEL_PROSP_FRONT_3-lead-vertical.jpg"
+                                      src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/Rajvilas/Dining/Rajmahal/desktop820x646/rajmahal.jpg"
                                       style={{
                                         position: "absolute",
                                         height: "100%",
@@ -267,10 +290,9 @@ const Article = () => {
                                     />
                                   </div>
                                   <div className="related-post-card-content">
-                                    <strong>Cars &amp; Bikes</strong>
+                                    <strong>Luxury Villas</strong>
                                     <h3 className="card-title mb-0">
-                                      Lamborghini Temerario GT3 Is Lighter,
-                                      Faster And Destined For Racing
+                                      Luxury with an Oberoi signature.
                                     </h3>
                                     <span className="author">
                                       {" "}
@@ -290,7 +312,7 @@ const Article = () => {
                                       decoding="async"
                                       data-nimg="fill"
                                       className="imgcover"
-                                      src="https://cdn.esquireindia.co.in/article/2025-04-13T09%3A06%3A46.689Z-Lead%20%2829%29.jpg"
+                                      src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/Rajvilas/Dining/suryamahal/desktop820x646/21.jpg"
                                       style={{
                                         position: "absolute",
                                         height: "100%",
@@ -302,9 +324,10 @@ const Article = () => {
                                     />
                                   </div>
                                   <div className="related-post-card-content">
-                                    <strong>Cars &amp; Bikes</strong>
+                                    <strong>Surya Mahal</strong>
                                     <h3 className="card-title mb-0">
-                                      6 Endurance Bikes To Lookout For In 2025
+                                      Our 'Sun Palace' is bright with natural
+                                      light during the day.
                                     </h3>
                                     <span className="author">
                                       {" "}
@@ -318,52 +341,48 @@ const Article = () => {
                         </div>
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            It whips you to 100 in just 4.5 seconds. Paired with
-                            Mercedes’ 9G-TRONIC automatic transmission and
-                            4MATIC all-wheel drive, it offers a buttery smooth,
-                            refined but punchy drive. But of course, the back
-                            seat is where the E-Class LWB truly dazzles. The
-                            rear cabin is nothing short of a sanctuary. In the
-                            new generation, the seats recline up to 36 degrees,
-                            include extendable thigh support and come with “boss
-                            mode,” allowing the rear passenger to push the front
-                            seat forward with the touch of a button, fully
-                            stretching out in ultimate relaxation.{" "}
+                            The perfect setting for an aperitif or an after
+                            dinner beverage. Sip on fine wine, a classic
+                            cocktail or a single malt. Challenge a friend to a
+                            game of chess or backgammon. Sit back with one of
+                            our leather bound classics under the noble gaze of
+                            ancient Maharajas captured in lithographs on the
+                            walls.
                           </span>
                         </p>
                         <p style={{ textAlign: "left" }} />
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            Despite the rise of SUVs, the E-Class continues to
-                            embody timeless elegance. Its stately design,
-                            complete with a chrome-heavy grille, sleek LED DRLs
-                            and a flowing silhouette, commands attention
-                            wherever it goes. Arriving in an E-Class still
-                            elicits a head-turn, a held-open door and an almost
-                            ceremonial welcome from onlookers who’ve long dreamt
-                            of being in your seat.
+                            The Sun Palace is our all day fine dining restaurant
+                            in Jaipur. It is bright with natural light during
+                            the day. After dark, the al fresco courtyard
+                            shimmers beneath the phosphorescent moon and the
+                            main hall glitters under the light of the crystal
+                            chandelier. The menu includes Western,
+                            Mediterranean, Asian and Indian cuisine. We also
+                            offer a specially curated wellness menu.
                           </span>
                         </p>
                         <div>
-                          <div className="ad-flex-all">
+                          {/* <div className="ad-flex-all">
                             <div
                               id="div-gpt-ad-stories-middle-12"
                               data-cy="Ad"
                               className="ad-text"
                               style={{ margin: "30px auto" }}
                             />
-                          </div>
+                          </div> */}
                         </div>
                         <p style={{ textAlign: "left" }} />
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            As I lean back, fully reclined and insulated from
-                            the chaos outside, I’m reminded again why this car
-                            has endured. Few vehicles can blend tradition,
-                            innovation, and indulgence so effortlessly. The
-                            Mercedes-Benz E-Class isn’t just transportation.
-                            It’s an experience, a status symbol, and for many, a
-                            coveted car.
+                            The perfect setting for an aperitif or an after
+                            dinner beverage. Sip on fine wine, a classic
+                            cocktail or a single malt. Challenge a friend to a
+                            game of chess or backgammon. Sit back with one of
+                            our leather bound classics under the noble gaze of
+                            ancient Maharajas captured in lithographs on the
+                            walls.
                           </span>
                         </p>
                         <div>
@@ -390,20 +409,17 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://cdn.esquireindia.co.in/editor-images/2025-07-18T07%3A08%3A38.725Z-1Ferrari%20296%20GTB%20%C3%AF%C2%80%C2%A2%20GTS.jpg"
+                                src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/rajvilas/dining/suryamahal/desktop820x646/21.jpg?w=724&hash=e06a851f36fcece9e1280a37cbfad74e"
                               />
                               <div className="photoBy">
                                 <span className="caption">
-                                  Ferrari 296 GTB / GTS{" "}
+                                  Surya Mahal
                                 </span>
                                 <span className="courtesy" />
                               </div>
                             </div>
                           </div>
                         </div>
-                      
-                        
-                        
                       </div>
                     </div>
                   </div>

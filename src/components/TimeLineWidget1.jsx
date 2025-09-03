@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import SplitText from "gsap/dist/SplitText";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const TimeLineWidget1 = () => {
-      const timelineData1 = [
+  const timelineData1 = [
     {
       yearLabel: "2000+",
       subtitle: "YEARS AGO",
@@ -21,11 +21,10 @@ const TimeLineWidget1 = () => {
           caption:
             "”son ta” tree - Toxicodendron vernicifluum (Son Ta Phu Tho - Rhus Succedanea paint in Phu Tho)",
         },
-      
       ],
     },
   ];
-      const timelineData2 = [
+  const timelineData2 = [
     {
       yearLabel: "2000+",
       subtitle: "YEARS AGO",
@@ -41,11 +40,10 @@ const TimeLineWidget1 = () => {
           caption:
             "”son ta” tree - Toxicodendron vernicifluum (Son Ta Phu Tho - Rhus Succedanea paint in Phu Tho)",
         },
-      
       ],
     },
   ];
-      const timelineData3 = [
+  const timelineData3 = [
     {
       yearLabel: "2000+",
       subtitle: "YEARS AGO",
@@ -61,11 +59,10 @@ const TimeLineWidget1 = () => {
           caption:
             "”son ta” tree - Toxicodendron vernicifluum (Son Ta Phu Tho - Rhus Succedanea paint in Phu Tho)",
         },
-      
       ],
     },
   ];
-      const timelineData4 = [
+  const timelineData4 = [
     {
       yearLabel: "2000+",
       subtitle: "YEARS AGO",
@@ -81,39 +78,68 @@ const TimeLineWidget1 = () => {
           caption:
             "”son ta” tree - Toxicodendron vernicifluum (Son Ta Phu Tho - Rhus Succedanea paint in Phu Tho)",
         },
-      
       ],
     },
   ];
-useEffect(() => {
-  const mm = gsap.matchMedia();
+  useEffect(() => {
+    const mm = gsap.matchMedia();
 
-  mm.add("(min-width: 992px)", () => {
-    const container = document.querySelector(`.${styles.horizontal}`);
-    const wrapper = container?.querySelector(`.${styles.horizontal_wrapper}`);
-    const listItems = container?.querySelectorAll(`.${styles.about_list_item}`);
+    mm.add("(min-width: 992px)", () => {
+      const container = document.querySelector(`.${styles.horizontal}`);
+      const wrapper = container?.querySelector(`.${styles.horizontal_wrapper}`);
+      const listItems = container?.querySelectorAll(
+        `.${styles.about_list_item}`
+      );
 
-    if (container && wrapper && listItems.length) {
-      const horizontalScrollTimeline = gsap.timeline({
-        defaults: { ease: "none" },
-        scrollTrigger: {
-          trigger: container,
-          start: "top top",
-          end: () => "+=" + (wrapper.scrollWidth - window.innerWidth),
-          pin: true,
-          scrub: 1,
-          invalidateOnRefresh: true,
-        },
-      }).to(wrapper, {
-        x: () => -(wrapper.scrollWidth - window.innerWidth),
-        ease: "none",
-      });
+      if (container && wrapper && listItems.length) {
+        const horizontalScrollTimeline = gsap
+          .timeline({
+            defaults: { ease: "none" },
+            scrollTrigger: {
+              trigger: container,
+              start: "top top",
+              end: () => "+=" + (wrapper.scrollWidth - window.innerWidth),
+              pin: true,
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          })
+          .to(wrapper, {
+            x: () => -(wrapper.scrollWidth - window.innerWidth),
+            ease: "none",
+          });
+
+        listItems.forEach((item) => {
+          const split = new SplitText(item, {
+            //   type: "lines",
+            linesClass: "single_line",
+            mask: "lines",
+          });
+
+          gsap.from(split.lines, {
+            yPercent: 100,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: item,
+              containerAnimation: horizontalScrollTimeline,
+              start: "left 80%",
+              once: true,
+            },
+          });
+        });
+      }
+    });
+
+    mm.add("(max-width: 991px)", () => {
+      const listItems = document.querySelectorAll(`.${styles.about_list_item}`);
 
       listItems.forEach((item) => {
         const split = new SplitText(item, {
-        //   type: "lines",
-          linesClass: "single_line",
-          mask: "lines"
+          type: "lines",
+          mask: "lines",
+          linesClass: `${styles.single_line}`,
         });
 
         gsap.from(split.lines, {
@@ -123,47 +149,19 @@ useEffect(() => {
           stagger: 0.1,
           scrollTrigger: {
             trigger: item,
-            containerAnimation: horizontalScrollTimeline,
-            start: "left 80%",
+            start: "top 90%",
             once: true,
           },
         });
       });
-    }
-  });
-
-  mm.add("(max-width: 991px)", () => {
-    const listItems = document.querySelectorAll(`.${styles.about_list_item}`);
-
-    listItems.forEach((item) => {
-      const split = new SplitText(item, {
-        type: "lines",
-        mask:"lines",
-        linesClass: `${styles.single_line}`,
-      });
-
-      gsap.from(split.lines, {
-        yPercent: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: item,
-          start: "top 90%",
-          once: true,
-        },
-      });
     });
-  });
 
-  // Cleanup SplitText instances on unmount
-  return () => {
-    SplitText.revert();
-    mm.revert();
-  };
-}, []);
-
-
+    // Cleanup SplitText instances on unmount
+    return () => {
+      SplitText.revert();
+      mm.revert();
+    };
+  }, []);
 
   return (
     <div className={`${styles.horizontal} ${styles.is_about}`}>
@@ -179,9 +177,9 @@ useEffect(() => {
               <div className={styles.about_horizontal_slide}>
                 <div className={styles.about_timeline_heading_wrapper}>
                   <h2 className={styles.about_timeline_heading}>
-                    {item.yearLabel}
+                    Accommodation
                   </h2>
-                  <div className={styles.yearago}>{item.subtitle}</div>
+                  {/* <div className={styles.yearago}>{item.subtitle}</div> */}
                 </div>
                 <div className={styles.about_horizontal_info}>
                   <div className={styles.u_hide_tablet}></div>
@@ -194,14 +192,24 @@ useEffect(() => {
                     <h3
                       className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
                     >
-                      {item.title}
+                      Villas
                     </h3>
                     <ul role="list" className={styles.about_list}>
-                      {item.highlights.map((text, idx) => (
+                      {/* {item.highlights.map((text, idx) => (
                         <li key={idx} className={styles.about_list_item}>
                           {text}
-                        </li>
-                      ))}
+                        </li> */}
+                      <li className={styles.about_list_item}>
+                        Spread across three spacious buildings, the villa
+                        includes two en-suite bedrooms — one king-size and one
+                        twin.
+                      </li>
+                      <li className={styles.about_list_item}>
+                        The third building features a lounge and dining area.
+                        Outside, enjoy a private pool and an exclusive dining
+                        pavilion.
+                      </li>
+                      {/* ))} */}
                     </ul>
                   </div>
                 </div>
@@ -213,12 +221,16 @@ useEffect(() => {
                         className={styles.about_horizontal_image_wrapper}
                       >
                         <img
-                          src={img.src}
+                          src="
+                          https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/accommodation_rajvilas/kohinoor-villa-with-private-pool/ks_revised/820x646/kohinoor_suite_pool_area.jpg?w=724&hash=1a4968a78bc9df5c845ec4e75be5b46d"
                           alt={img.alt}
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>{img.caption}</em>
+                          <em>
+                            Every detail has been considered in this exceptional
+                            accommodation.
+                          </em>
                         </div>
                       </div>
                       <div className={styles.about_horizontal_image_column}>
@@ -226,7 +238,7 @@ useEffect(() => {
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/68119711d1367d41ac4bf764_p1-2.avif"
+                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/accommodation_rajvilas/kohinoor-villa-with-private-pool/ks_revised/820x646/kohinoor_suite_living_room.jpg?w=310&hash=9bbd11afb733ef456bf83f155e0d675d"
                             loading="lazy"
                             width="390"
                             height="260"
@@ -235,8 +247,7 @@ useEffect(() => {
                           />
                           <div className={styles.u_text_style_small}>
                             <em>
-                              Lacquer Tree Resin <br /> (Son Ta Phu Tho - Rhus
-                              Succedanea paint in Phu Tho)
+                              Includes a master bedroom, an en-suite bathroom,
                             </em>
                           </div>
                         </div>
@@ -244,7 +255,7 @@ useEffect(() => {
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/68119711c8c4c74ad0ef0080_p1-3.avif"
+                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/accommodation_rajvilas/kohinoor-villa-with-private-pool/ks_revised/820x646/kohinoor_suite_dining_area_.jpg?w=310&hash=32a028e2fffe8236b6ec710f668a712c"
                             loading="lazy"
                             width="390"
                             height="260"
@@ -252,9 +263,7 @@ useEffect(() => {
                             className={styles.about_horizontal_image}
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>
-                              Harvesting Lacquer Resin (Vietnam Essential Oil)
-                            </em>
+                            <em>Temperature-controlled swimming poo</em>
                           </div>
                         </div>
                       </div>
@@ -281,14 +290,11 @@ useEffect(() => {
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>
-                      
-                      1st–10th
-                    </h2>
-                    <div className={styles.yearago}>
+                    <h2 className={styles.about_timeline_heading}>Dining</h2>
+                    {/* <div className={styles.yearago}>
                      
                       CENTURY
-                    </div>
+                    </div> */}
                   </div>
                   <div className={styles.about_horizontal_progress}>
                     <div className={styles.about_progress_circle_wrapper}>
@@ -318,13 +324,15 @@ useEffect(() => {
                         className={styles.about_horizontal_image_wrapper}
                       >
                         <img
-                          src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/68119711861fe7c407fb2273_p2-1.avif"
+                          src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/Rajvilas/Dining/suryamahal/desktop820x646/21.jpg"
                           alt={img.alt}
-                          
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>{img.caption}</em>
+                          <em>
+                            The Sun Palace is our all day fine dining restaurant
+                            in Jaipur.{" "}
+                          </em>
                         </div>
                       </div>
                       <div className={styles.about_horizontal_image_column}>
@@ -332,16 +340,14 @@ useEffect(() => {
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/6811971344ee665ea9741be0_p2-2-p-500.avif"
+                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/Rajvilas/Dining/Rajmahal/desktop820x646/rajmahal.jpg"
                             loading="lazy"
-                           
                             alt=""
                             className={styles.about_horizontal_image}
                           />
                           <div className={styles.u_text_style_small}>
                             <em>
-                              Lacquer Tree Resin <br /> (Son Ta Phu Tho - Rhus
-                              Succedanea paint in Phu Tho)
+                              Raj Mahal is our speciality Indian restaurant.
                             </em>
                           </div>
                         </div>
@@ -369,14 +375,8 @@ useEffect(() => {
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>
-                      
-                      20th
-                    </h2>
-                    <div className={styles.yearago}>
-                     
-                      CENTURY
-                    </div>
+                    <h2 className={styles.about_timeline_heading}>Wellness</h2>
+                    {/* <div className={styles.yearago}>CENTURY</div> */}
                   </div>
                   <div className={styles.about_horizontal_progress}>
                     <div className={styles.about_progress_circle_wrapper}>
@@ -387,7 +387,7 @@ useEffect(() => {
                     <h3
                       className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
                     >
-                      {item.title}
+                      The Oberoi Spa
                     </h3>
                     <ul role="list" className={styles.about_list}>
                       {item.highlights.map((text, idx) => (
@@ -406,13 +406,12 @@ useEffect(() => {
                         className={styles.about_horizontal_image_wrap_big}
                       >
                         <img
-                          src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/68119711a2d7fac16fedbcc4_p3-1.avif"
+                          src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/wellness/spa_therapies/desktop820x646/oberoi_exp.jpg"
                           alt={img.alt}
-                          
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>{img.caption}</em>
+                          <em>The Oberoi Spa in Jaipur offers Eastern,</em>
                         </div>
                       </div>
                       <div className={styles.about_horizontal_image_column}>
@@ -420,18 +419,14 @@ useEffect(() => {
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/68119711f7e09883bc3c7660_p3-2.avif"
+                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/wellness/spa_therapies/desktop820x646/massage.jpg"
                             loading="lazy"
-                           
                             alt=""
                             className={styles.about_horizontal_image}
                             sizes="(max-width: 479px) 100vw, 418px"
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>
-                              Lacquer Tree Resin <br /> (Son Ta Phu Tho - Rhus
-                              Succedanea paint in Phu Tho)
-                            </em>
+                            <em>Located in a carefully restored haveli,</em>
                           </div>
                         </div>
                       </div>
@@ -458,14 +453,8 @@ useEffect(() => {
                   <div
                     className={`${styles.about_timeline_heading_wrapper} ${styles.is_section_2}`}
                   >
-                    <h2 className={styles.about_timeline_heading}>
-                      
-                      Late 20th
-                    </h2>
-                    <div className={styles.yearago}>
-                     
-                      CENTURY
-                    </div>
+                    <h2 className={styles.about_timeline_heading}>Events</h2>
+                    {/* <div className={styles.yearago}>CENTURY</div> */}
                   </div>
                   <div className={styles.about_horizontal_progress}>
                     <div className={styles.about_progress_circle_wrapper}>
@@ -476,7 +465,7 @@ useEffect(() => {
                     <h3
                       className={`${styles.u_text_style_h4} ${styles.u_mb_5}`}
                     >
-                      {item.title}
+                      Events
                     </h3>
                     <ul role="list" className={styles.about_list}>
                       {item.highlights.map((text, idx) => (
@@ -496,31 +485,32 @@ useEffect(() => {
                           className={styles.about_horizontal_image_wrapper}
                         >
                           <img
-                            src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/68119711f34229a2396ee1f6_p4-1.avif"
+                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/rajvilas-new/Event/event/desktop_overview_1260x600/conference_hall.jpg"
                             alt={img.alt}
                             //   width="390"
                             //     height="475"
                             className={styles.about_horizontal_image}
                           />
                           <div className={styles.u_text_style_small}>
-                            <em>{img.caption}</em>
+                            <em>
+                              Chandravanshi. Furnished with a grand table that
+                              can seat up to 22 people. 
+                            </em>
                           </div>
                         </div>
                         <div
                           className={styles.about_horizontal_artwork_wrapper}
                         >
                           <img
-                            src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/6812cdef13b9d1f75fa9fc7d_p4-2.avif"
+                            src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/rajvilas-new/Event/event/desktop_overview_1260x600/conference_hall.jpg"
                             loading="lazy"
-                           
                             alt=""
                             className={styles.about_horizontal_image}
                             sizes="(max-width: 479px) 100vw, 418px"
                           />
                           <div className={styles.u_text_style_small}>
                             <em>
-                              Lacquer Tree Resin <br /> (Son Ta Phu Tho - Rhus
-                              Succedanea paint in Phu Tho)
+                              Host a professional event or a meeting at The Oberoi Rajvilas, Jaipur.
                             </em>
                           </div>
                         </div>
@@ -530,13 +520,12 @@ useEffect(() => {
                         className={styles.about_horizontal_artwork_wrapper}
                       >
                         <img
-                          src="https://cdn.prod.website-files.com/6734928e2af1829d3c568460/6812cdb6edcfd0478a88501b_p4-3.avif"
+                          src="https://www.oberoihotels.com/-/media/oberoi-hotel/the-oberoi-rajvilas/rajvilas-new/Event/event/desktop_overview_1260x600/board_room.jpg"
                           alt={img.alt}
-                          
                           className={styles.about_horizontal_image}
                         />
                         <div className={styles.u_text_style_small}>
-                          <em>{img.caption}</em>
+                          <em>Host a professional event or a meeting at The Oberoi Rajvilas, Jaipur.</em>
                         </div>
                       </div>
                     </>
@@ -556,32 +545,31 @@ useEffect(() => {
 
 export default TimeLineWidget1;
 
-
 // const t = gsap.matchMedia();
-    // t.add("(min-width: 769px)", () => {
-    //   const t = document.querySelector(`.${styles.horizontal}`),
-    //     r = t.querySelector(`.${styles.horizontal_wrapper}`);
-    //   t &&
-    //     r &&
-    //     gsap
-    //       .timeline({
-    //         defaults: {
-    //           ease: "none",
-    //         },
-    //         scrollTrigger: {
-    //           trigger: t,
-    //           start: "top top",
-    //           end: () => "+=" + (r.scrollWidth - window.innerWidth),
-    //           pin: !0,
-    //           scrub: 1,
-    //           invalidateOnRefresh: !0,
-    //         },
-    //       })
-    //       .to(r, {
-    //         x: () => -(r.scrollWidth - window.innerWidth),
-    //         ease: "none",
-    //       });
-    // }),
-    //   t.add("(max-width: 768px)", () => {
-    //     ScrollTrigger.kill();
-    //   });
+// t.add("(min-width: 769px)", () => {
+//   const t = document.querySelector(`.${styles.horizontal}`),
+//     r = t.querySelector(`.${styles.horizontal_wrapper}`);
+//   t &&
+//     r &&
+//     gsap
+//       .timeline({
+//         defaults: {
+//           ease: "none",
+//         },
+//         scrollTrigger: {
+//           trigger: t,
+//           start: "top top",
+//           end: () => "+=" + (r.scrollWidth - window.innerWidth),
+//           pin: !0,
+//           scrub: 1,
+//           invalidateOnRefresh: !0,
+//         },
+//       })
+//       .to(r, {
+//         x: () => -(r.scrollWidth - window.innerWidth),
+//         ease: "none",
+//       });
+// }),
+//   t.add("(max-width: 768px)", () => {
+//     ScrollTrigger.kill();
+//   });
