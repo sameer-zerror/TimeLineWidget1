@@ -216,7 +216,7 @@
     align-items: flex-start;
   }
   .about_timeline_heading {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
   }
   .about_horizontal_info {
     grid-column-gap: 2rem;
