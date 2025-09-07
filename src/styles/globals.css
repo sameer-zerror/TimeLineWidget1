@@ -3,7 +3,7 @@
 :root {
   --font-family-primary: "miller-headline", serif;
   --font-family-secondary: system-ui, -apple-system, "Segoe UI", Roboto,
-  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -45,10 +45,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
-
 }
-
-
 
 /* bootstrapcontainercss */
 .container,
@@ -111,9 +108,8 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-.p-0
- {
-    padding: 0 !important;
+.p-0 {
+  padding: 0 !important;
 }
 /* .row>* {
     flex-shrink: 0;
@@ -133,12 +129,29 @@ body {
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .align-items-center {
-    align-items: center !important;
+  align-items: center !important;
 }
 
 .d-flex {
-    display: flex !important
+  display: flex !important
 ;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+
+.nav {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: var(--bs-link-color);
+  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-disabled-color: var(--bs-secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 @media (min-width: 768px) {
   .col-md-3 {
@@ -180,7 +193,7 @@ body {
   justify-content: flex-end !important;
 }
 /* bootstrapcontainercss */
-li{
+li {
   list-style: none;
 }
 h2 {
